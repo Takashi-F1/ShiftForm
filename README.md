@@ -1,0 +1,2 @@
+# ShiftForm
+バイト先のシフト調整用GoogleForm作成の自動化
