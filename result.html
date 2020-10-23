@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <title>Form作成完了</title>
+    <style>
+        h2 {
+            text-align: center;
+            font-family: fantasy;
+        }
+
+        body {
+            border: solid 3px #00bfff;
+            min-width: 710px;
+            max-width: 800px;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 5px 0px;
+            border-top: dotted 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>GoogleFormの作成が完了しました！
+        <br>管理用URL:<span id="own"> <?=OwnUrl?></span> 
+        <br>配布用URL:<span id="dis"> <?=DisUrl?></span> 
+    </h2>
+
+    <br><br><br><br>
+    <footer>
+        <p>© All rights reserved by TakashiFujimoto</p>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            var OwnUrl = document.getElementById("own");
+            var DisUrl = document.getElementById("dis");
+            OwnUrl.innerHTML = ("<a href= " + OwnUrl.innerHTML + " &quot; target = '_blank' rel='noopener noreferrer'>" + OwnUrl.innerText + "</a>");
+            DisUrl.innerHTML = ("<a href= " + DisUrl.innerHTML + " &quot; target = '_blank' rel='noopener noreferrer'>" + DisUrl.innerText + "</a>");
+        }
+    </script>
+</body>
+
+</html>
